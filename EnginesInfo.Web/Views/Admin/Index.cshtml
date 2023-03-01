@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+<h2>Редагування даних сутностей ПО "Облік двигунів"</h2>
+
+<div class="row panel">
+    @Html.ActionLink("Двигуни",
+            "Index", "EnginesCrud", null,
+            new { @class = "btn btn-block btn-default btn-lg" })
+</div>
+

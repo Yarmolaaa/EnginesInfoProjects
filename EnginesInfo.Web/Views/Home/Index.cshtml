@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+<h2>Перегляд даних</h2>
+
+<div class="row panel">
+    @Html.ActionLink("Двигуни",
+        "Index", "Engines", null,
+        new { @class = "btn btn-block btn-default btn-lg" })
+</div>
+<div class="row panel">
+    @Html.ActionLink("Моделі двигунів",
+        "Index", "Models", null,
+        new { @class = "btn btn-block btn-default btn-lg" })
+</div>

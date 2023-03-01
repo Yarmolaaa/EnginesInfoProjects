@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EnginesInfo.Engine>
+
+@{
+    //ViewBag.Title = "ObjectsInfo";
+    ViewBag.Title = "Двигуни";
+}
+
+@*<h2>ObjectsInfo</h2>*@
+<h2>Облік двигунів</h2>
+
+<p>@Html.ActionLink("Назад", "Index")</p>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.model.name</strong>
+            </h3>
+            <strong class="lead">Модель двигуна: @m.model.name</strong><br />
+            <strong class="lead">Рік випуску: @m.year</strong><br />
+            @*@if (!string.IsNullOrEmpty(m.note)) {
+                    <strong class="lead">Примітка:</strong><br />
+                    @Html.Partial("_DescriptiveBlock", m.note)
+                }*@
+        </div>
+    </div>
+    @*@Html.Action("_DescriptiveInfo", new { id = @m.Id })*@
+}
