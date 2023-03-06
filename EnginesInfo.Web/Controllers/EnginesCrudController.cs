@@ -38,9 +38,19 @@ namespace EnginesInfo.Web.Controllers
             return View(model);
         }
 
+        public ViewResult Create()
+        {
+            ViewBag.Models = UoW.ToModelsSelectList();
+            return View(new EngineEditingModel());
+        }
+
         [HttpPost]
         public ActionResult Create(EngineEditingModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
             UoW.AddEngine(model);
             UoW.Save();
             TempData["message"] = string.Format(

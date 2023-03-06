@@ -9,6 +9,8 @@ namespace EnginesInfo.Web
 {
     public class RouteConfig
     {
+        public const string ALL_VALUES = "...";
+
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

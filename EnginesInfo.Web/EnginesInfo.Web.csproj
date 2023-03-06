@@ -131,6 +131,7 @@
     <Compile Include="Controllers\EnginesController.cs" />
     <Compile Include="Controllers\EnginesCrudController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,6 +157,10 @@
     <Content Include="Views\EnginesCrud\Details.cshtml" />
     <Content Include="Views\EnginesCrud\Edit.cshtml" />
     <Content Include="Views\EnginesCrud\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Engines\EnginesByModelsInfo.cshtml" />
+    <Content Include="Views\Navigation\UsedModelsMenu.cshtml" />
+    <Content Include="Views\Shared\_CategoryLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

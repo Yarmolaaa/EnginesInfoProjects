@@ -17,14 +17,13 @@ namespace EnginesInfo.Web.Models
         [StringLength(50, MinimumLength = 3,
              ErrorMessage = "Назва моделі двигуна "
              + "повинна містити від 3 до 50 символів")]
-        public Model Models { get; set; }
+        public string Models { get; set; }
 
         [Display(Name = "Рік випуску")]
         [Required(ErrorMessage =
              "Потрібно заповнити поле \'Рік випуску\'")]
-        [StringLength(4, MinimumLength = 4,
-             ErrorMessage = "Рік випуску "
-             + "повинна містити 4 символа")]
+        [Range(1895, 2022, ErrorMessage = "Рік випуску "
+            + "повинен бути в межах від 1895 до 2022")]
         public int? Year { get; set; }
 
 
@@ -34,7 +33,7 @@ namespace EnginesInfo.Web.Models
             return new EngineEditingModel()
             {
                 Id = obj.Id,
-                Models = obj.model,
+                Models = obj.model.name,
                 Year = obj.year,
                 
             };

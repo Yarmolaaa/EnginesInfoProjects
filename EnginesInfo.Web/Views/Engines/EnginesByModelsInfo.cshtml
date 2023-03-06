@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EnginesInfo.Engine>
+
+@{
+    ViewBag.Title = "EnginesByModelsInfo";
+    Layout = "~/Views/Shared/_CategoryLayout.cshtml";
+}
+
+<h2>EnginesByModelsInfo</h2>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.model.name</strong>
+            </h3>
+            <strong class="lead">Назва моделі: @m.model.name</strong><br />
+            <strong class="lead">Рік випуску @m.year</strong><br />
+        </div>
+    </div>
+}
+
+
+@section NavMenu {
+    @Html.Action("UsedModelsMenu", "Navigation",
+         new { categoryName = ViewBag.SelectedCategoryName })
+}
+
